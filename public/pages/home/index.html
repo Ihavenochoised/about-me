@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./src/style.css" />
+		<title>About Tian Tian</title>
+	</head>
+	<body>
+		<!-- Menu Bar -->
+		<header></header>
+		<!-- Preload Content -->
+		<div class="loadingPage">
+			<div class="contentArea">
+				<div class="progressContainer">
+					<div class="progressBar" id="progressBar"></div>
+				</div>
+				<div id="logs">
+					<div class="monoText" style="--entry-delay: 0s;">
+						<p id="timeStamp" class="inline fadeInTimeStamp"></p>
+						<p class="inline fadeInLog">
+							Incoming HTTP request detected ...
+						</p>
+					</div>
+					<div class="monoText" style="--entry-delay: 1.5s;">
+						<p id="timeStamp" class="inline fadeInTimeStamp"></p>
+						<p class="inline fadeInLog">Service waking up ...</p>
+					</div>
+					<div class="monoText" style="--entry-delay: 4.5s;">
+						<pre class="xs fadeInLog" style="opacity: 0;"> 
+ /$$      /$$           /$$                                                   /$$$$$$$$              /$$$$$$$  /$$   /$$ /$$      /$$
+| $$  /$ | $$          | $$                                                  |__  $$__/             | $$__  $$| $$  / $$| $$$    /$$$
+| $$ /$$$| $$  /$$$$$$ | $$  /$$$$$$$  /$$$$$$  /$$$$$$/$$$$   /$$$$$$          | $$  /$$$$$$       | $$  \ $$|  $$/ $$/| $$$$  /$$$$
+| $$/$$ $$ $$ /$$__  $$| $$ /$$_____/ /$$__  $$| $$_  $$_  $$ /$$__  $$         | $$ /$$__  $$      | $$  | $$ \  $$$$/ | $$ $$/$$ $$
+| $$$$_  $$$$| $$$$$$$$| $$| $$      | $$  \ $$| $$ \ $$ \ $$| $$$$$$$$         | $$| $$  \ $$      | $$  | $$  &gt;$$  $$ | $$  $$$| $$
+| $$$/ \  $$$| $$_____/| $$| $$      | $$  | $$| $$ | $$ | $$| $$_____/         | $$| $$  | $$      | $$  | $$ /$$/\  $$| $$\  $ | $$
+| $$/   \  $$|  $$$$$$$| $$|  $$$$$$$|  $$$$$$/| $$ | $$ | $$|  $$$$$$$         | $$|  $$$$$$/      | $$$$$$$/| $$  \ $$| $$ \/  | $$
+|__/     \__/ \_______/|__/ \_______/ \______/ |__/ |__/ |__/ \_______/         |__/ \______/       |_______/ |__/  |__/|__/     |__/
+<br><br>                                                                                                                                     
+                                                 /$$$$$$$                                                                            
+                                                | $$__  $$                                                                           
+                                                | $$  \ $$ /$$$$$$   /$$$$$$   /$$$$$$                                               
+                                                | $$$$$$$/|____  $$ /$$__  $$ /$$__  $$                                              
+                                                | $$____/  /$$$$$$$| $$  \ $$| $$$$$$$$                                              
+                                                | $$      /$$__  $$| $$  | $$| $$_____/                                              
+                                                | $$     |  $$$$$$$|  $$$$$$$|  $$$$$$$                                              
+                                                |__/      \_______/ \____  $$ \_______/                                              
+                                                                    /$$  \ $$                                                        
+                                                                   |  $$$$$$/                                                        
+                                                                    \______/
+						</pre>
+					</div>
+					<div class="monoText" style="--entry-delay: 6s;">
+						<p id="timeStamp" class="inline fadeInTimeStamp"></p>
+						<p class="inline fadeInLog">
+							Allocating compute resources ...
+						</p>
+					</div>
+					<div class="monoText" style="--entry-delay: 7.5s;">
+						<p id="timeStamp" class="inline fadeInTimeStamp"></p>
+						<p class="inline fadeInLog">
+							Preparing instance for initialisation ...
+						</p>
+					</div>
+					<div class="monoText" style="--entry-delay: 9s;">
+						<p id="timeStamp" class="inline fadeInTimeStamp"></p>
+						<p class="inline fadeInLog">
+							Starting the instance ...
+						</p>
+					</div>
+					<div class="monoText" style="--entry-delay: 10.5s;">
+						<p id="timeStamp" class="inline fadeInTimeStamp"></p>
+						<p class="inline fadeInLog">
+							Environmental variables injected ...
+						</p>
+					</div>
+					<div class="monoText" style="--entry-delay: 12s;">
+						<p id="timeStamp" class="inline fadeInTimeStamp"></p>
+						<p class="inline fadeInLog">Finalising startup ...</p>
+					</div>
+					<div class="monoText" style="--entry-delay: 13.5s;">
+						<p id="timeStamp" class="inline fadeInTimeStamp"></p>
+						<p class="inline fadeInLog">
+							Optimising deployment ...
+						</p>
+					</div>
+					<div class="monoText" style="--entry-delay: 15s;">
+						<p class="inline fadeInTimeStamp">console.log:</p>
+						<p class="inline fadeIn">
+							Welcome to DAXIONGMAO's website!
+						</p>
+						<p
+							class="inline fadeIn"
+							id="timer"
+							style="--entry-delay: 17.5s"
+						>
+							Proceeding in 5s ...
+						</p>
+					</div>
+				</div>
+				<div
+					style="display: flex; gap: 0.75rem; align-items: center; white-space: nowrap;"
+					class="loadingContainer"
+				>
+					<svg
+						id="spinLogo"
+						class="spinAnimation"
+						viewBox="0 0 16 17"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							class="loadingSpinner"
+							d="M4.99787 2.74907C5.92398 2.26781 6.95232 2.01691 7.99583 2.01758V3.01758C7.10643 3.01768 6.23035 3.23389 5.44287 3.64765C4.6542 4.06203 3.97808 4.66213 3.47279 5.39621C2.9675 6.13029 2.64821 6.97632 2.54245 7.86138C2.51651 8.07844 2.5036 8.29625 2.50359 8.51367H1.49585C1.49602 8.23118 1.51459 7.94821 1.55177 7.66654C1.68858 6.62997 2.07326 5.64172 2.67319 4.78565C3.27311 3.92958 4.07056 3.23096 4.99787 2.74907Z"
+						></path>
+						<path
+							class="loadingSpinner"
+							opacity="0.15"
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							d="M8 14.0137C11.0376 14.0137 13.5 11.5512 13.5 8.51367C13.5 5.47611 11.0376 3.01367 8 3.01367C4.96243 3.01367 2.5 5.47611 2.5 8.51367C2.5 11.5512 4.96243 14.0137 8 14.0137ZM8 15.0137C11.5899 15.0137 14.5 12.1035 14.5 8.51367C14.5 4.92382 11.5899 2.01367 8 2.01367C4.41015 2.01367 1.5 4.92382 1.5 8.51367C1.5 12.1035 4.41015 15.0137 8 15.0137Z"
+						></path>
+					</svg>
+					<p class="monoText textPrimary">Application Loading</p>
+				</div>
+			</div>
+		</div>
+		<script src="./src/script.js"></script>
+		<!-- 
+            My idea: 
+            - A terminal that says welcome to users on load
+        -->
+	</body>
+</html>
