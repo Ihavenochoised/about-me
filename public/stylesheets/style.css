@@ -1,0 +1,193 @@
+:root {
+	color-scheme: light;
+	--size-extraTiny: 2px;
+	--size-tiny: 4px;
+	--size-extraSmall: 6px;
+	--size-small: 8px;
+	--size-medium: 16px;
+	--size-normal: 24px;
+	--size-large: 32px;
+	--size-xLarge: 48px;
+	--size-xxLarge: 56px;
+	--size-extraLarge: 64px;
+	--font-size-tiny: 12px;
+	--font-size-small: 16px;
+	--font-size-medium: 18px;
+	--font-size-large: 32px;
+	--weight-thin: 100;
+	--weight-extraLight: 200;
+	--weight-light: 300;
+	--weight-normal: 400;
+	--weight-medium: 500;
+	--weight-semiBold: 600;
+	--weight-bold: 700;
+	--weight-extraBold: 800;
+	--text-strong: #0d0d0d;
+	--text-primary: #272727;
+	--text-secondary: #6b6b6b;
+	--page-primary: #fff;
+	--page-secondary: #fafafa;
+	--text-faint: #8f8f8f;
+	--text-disabled: #c7c7c7;
+	--border-primary: #e3e3e3;
+	--desktop-padding: 80px;
+	--mobile-padding: 40px;
+	--mobile-small-padding: 40px 20px;
+	--logo-height-desktop: 40px;
+	--logo-height-mobile: 30px;
+	--grid-square-size: 90px;
+	--animation-duration: 1s;
+}
+:root[data-theme='dark'] {
+	color-scheme: dark;
+	--text-strong: #fff;
+	--text-primary: #f0f0f0;
+	--text-secondary: #c7c7c7;
+	--page-primary: #0d0d0d;
+	--page-secondary: #141414;
+	--text-faint: #b3b3b3;
+	--text-disabled: #6b6b6b;
+	--border-primary: #4d4d4d;
+}
+
+/* -------------------------------------------------------- */
+
+@media (max-width: 1400px), (max-height: 900px) {
+	:root {
+		--grid-square-size: 80px;
+	}
+}
+@media (max-height: 900px) {
+	.contentArea {
+		padding: 60px;
+	}
+}
+
+/* -------------------------------------------------------- */
+
+@font-face {
+	font-family: 'Neue Montreal Mono';
+	src: url('https://ihavenochoised.github.io/tiantianassets/about/PP%20Neue%20Montreal%20Mono.woff2')
+		format('woff2');
+}
+
+/* -------------------------------------------------------- */
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+@keyframes fadeIn {
+	to {
+		opacity: 1;
+		color: var(--text-primary);
+	}
+}
+@keyframes fadeInOutLog {
+	0%, 10% {
+		opacity: 1;
+		color: var(--text-disabled);
+	}
+	10%, 20% {
+		opacity: 1;
+		color: var(--text-primary);
+	}
+	20%, 100% {
+		opacity: 1;
+		color: var(--text-faint);
+	}
+}
+@keyframes fadeInOutTimeStamp {
+	0%, 20% {
+		opacity: 1;
+		color: var(--text-faint);
+	}
+	20%, 100% {
+		opacity: 1;
+		color: var(--text-disabled);
+	}
+}
+
+/* -------------------------------------------------------- */
+
+* {
+	-webkit-tap-highlight-color: transparent;
+}
+body {
+	font-family: Roobert, sans-serif;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+/* -------------------------------------------------------- */
+
+#spinLogo {
+	width: 16px;
+	height: 17px;
+}
+#logs > div {
+	margin: 20px 0;
+}
+
+/* -------------------------------------------------------- */
+
+.inline {
+	display: inline;
+}
+.spinAnimation {
+	animation: spin var(--animation-duration) linear infinite;
+}
+.loadingSpinner {
+	fill: var(--text-primary);
+}
+.progressContainer {
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: rgba(0,0,0,0.1);
+    z-index: 9999;
+}
+.progressBar {
+	width: 0;
+	height: 100%;
+    background: #4caf50;
+    transition: width 0.5s ease;
+}
+.xs {
+	font-size: var(--size-extraSmall);
+}
+.monoText {
+	text-transform: uppercase;
+	font-family: 'Neue Montreal Mono';
+	font-size: 13px;
+}
+.textFaint {
+	color: var(--text-faint);
+}
+.textPrimary {
+	color: var(--text-primary);
+}
+.fadeInLog {
+	animation: fadeInOutLog 5s linear 1 normal forwards;
+	animation-delay: var(--entry-delay);
+	opacity: 0;
+}
+.fadeInTimeStamp {
+	animation: fadeInOutTimeStamp 3s linear 1 normal forwards;
+	animation-delay: var(--entry-delay);
+	opacity: 0;
+}
+.fadeIn {
+	animation: fadeIn 0.5s linear 1 normal forwards;
+	animation-delay: var(--entry-delay);
+	opacity: 0;
+}
